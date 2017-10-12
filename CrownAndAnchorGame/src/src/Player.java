@@ -39,7 +39,6 @@ public class Player {
 	public void receiveWinnings(int winnings) {
 		if (winnings < 0) throw new IllegalArgumentException("Winnings cannot be negative.");
 
-                System.out.println("Inside receiveWinnings"+ balance + winnings);
 		balance = balance + winnings;
                 
                  System.out.println("correct calculate Inside receiveWinnings" +  balance);
