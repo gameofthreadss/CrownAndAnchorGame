@@ -1,7 +1,7 @@
 
 public class Player {
 	private String name;
-	private int balance;
+	private int balance,newbalance;
 	private int limit;
 	
 	public Player(String name, int balance) {
@@ -38,7 +38,11 @@ public class Player {
 	
 	public void receiveWinnings(int winnings) {
 		if (winnings < 0) throw new IllegalArgumentException("Winnings cannot be negative.");
-		balance = balance + winnings;		
+
+                System.out.println("Inside receiveWinnings"+ balance + winnings);
+		balance = balance + winnings;
+                
+                 System.out.println("correct calculate Inside receiveWinnings" +  balance);
 	}
 	
 	public String toString() {

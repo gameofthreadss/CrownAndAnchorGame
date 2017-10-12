@@ -37,6 +37,8 @@ public class Game {
 			if (d.getValue().equals(pick)) { 
 				matches += 1;
 			}
+                        
+                        System.out.println(matches + " "  +bet);
 		}
 		
 		int winnings = matches * bet;
