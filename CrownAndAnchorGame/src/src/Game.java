@@ -40,7 +40,12 @@ public class Game {
                         
                         System.out.println(matches + " "  +bet);
 		}
-		
+		//Added condition to deduct balance only if user loses a bet.
+                if(matches == 0){
+                    		
+                    player.takeBet(bet);
+		   
+                }
 		int winnings = matches * bet;
 
 		if (matches > 0) {			
