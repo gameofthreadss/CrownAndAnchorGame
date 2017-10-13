@@ -31,7 +31,7 @@ public class Game {
 		if (bet < 0) throw new IllegalArgumentException("Bet cannot be negative.");
 		    
 		int matches = 0;
-                player.takeBet(bet);
+                
 		for ( Dice d : dice) {
 			d.roll();
 			if (d.getValue().equals(pick)) { 
@@ -45,7 +45,7 @@ public class Game {
 		if (matches > 0) {			
 			player.receiveWinnings(winnings);
 		} else {
-//			player.takeBet(bet);
+			player.takeBet(bet);
 		}
         return winnings;		
 	}

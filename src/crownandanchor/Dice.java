@@ -1,7 +1,7 @@
 package crownandanchor;
 public class Dice {
 			
-	private DiceValue value;
+private DiceValue value;
 	
 	public Dice() {
 		value =  DiceValue.getRandom();

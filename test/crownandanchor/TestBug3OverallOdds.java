@@ -14,8 +14,8 @@ import crownandanchor.Player;
 
 public class TestBug3OverallOdds {
 
-	private static final String NAME = "Sam";
-	private static final int STARTING_BALANCE = 1000;
+	private static final String NAME = "Fred";
+	private static final int STARTING_BALANCE = 10000;
 	private static final int BETTING_LIMIT = 0;
 	private static final DiceValue PICK_CROWN = DiceValue.CROWN;
 	private static final int BET_AMOUNT = 5;
