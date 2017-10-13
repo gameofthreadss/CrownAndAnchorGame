@@ -38,8 +38,12 @@ public class Game {
 				matches += 1;
 			}
 		}
-		 System.out.println("Matches :" +matches+ "+ Bet Amount: +"+bet );
+                
+		 System.out.println("Matches :" + matches + "+ Bet Amount: +"+ bet );
+                 
 		int winnings = matches * bet;
+                //To calculate wiinig amount
+                 System.out.println("Winning  :" + winnings );
 
 		if (matches > 0) {			
 			player.receiveWinnings(winnings);
