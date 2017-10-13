@@ -1,3 +1,5 @@
+package src;
+
 import java.util.List;
 import java.io.*;
 
@@ -44,9 +46,9 @@ public class Main {
                    
                 	System.out.printf("Turn %d: %s bet %d on %s\n",
                 			turn, player.getName(), bet, pick); 
-                	
+                	// System.out.printf("before  balance %d\n\n", player.getBalance());
                 	int winnings = game.playRound(player, pick, bet);
-                        
+                        // System.out.printf("after balance now %d\n\n",player.getBalance());
                     cdv = game.getDiceValues();
                     
                     System.out.printf("Rolled %s, %s, %s\n",

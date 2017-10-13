@@ -1,3 +1,5 @@
+package src;
+
 import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
@@ -29,8 +31,7 @@ public class Game {
 		if (pick == null) throw new IllegalArgumentException("Pick cannot be negative.");
 		if (bet < 0) throw new IllegalArgumentException("Bet cannot be negative.");
 		
-		player.takeBet(bet);
-		    
+		    // player.takeBet(bet);//bug 1
 		int matches = 0;
 		for ( Dice d : dice) {
 			d.roll();
@@ -39,16 +40,21 @@ public class Game {
 			}
 		}
                 
-		 System.out.println("Matches :" + matches + "+ Bet Amount: +"+ bet );
+		// System.out.println("Matches :" + matches + "+ Bet Amount: +"+ bet );
                  
 		int winnings = matches * bet;
                 //To calculate wiinig amount
-                 System.out.println("Winning  :" + winnings );
-                System.out.println("balance before bet :" + player.getBalance());
+                // System.out.println("Winning  :" + winnings );
+                //System.out.println("balance before bet :\n\n" + player.getBalance());
 		if (matches > 0) {			
-			player.receiveWinnings(winnings);
-                        
+			player.receiveWinnings(winnings);                       
+                        //System.out.println("balance after bet :\n\n" + player.getBalance());
 		}
+                else
+                {
+                  player.takeBet(bet);//bug 1 correected
+                   
+                }
         return winnings;		
 	}
 	
