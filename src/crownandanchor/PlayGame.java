@@ -127,13 +127,13 @@ public class PlayGame {
                     		cdv.get(0), cdv.get(1), cdv.get(2));
                     
                     if (winnings > 0) {
-	                    System.out.printf("%s won %d, balance now %d\n\n",
-	                    		player.getName(), winnings, player.getBalance());
+//	                    System.out.printf("%s won %d, balance now %d\n\n",
+//	                    		player.getName(), winnings, player.getBalance());
 	                	winCount++; 
                     }
                     else {
-	                    System.out.printf("%s lost, balance now %d\n\n",
-	                    		player.getName(), player.getBalance());
+//	                    System.out.printf("%s lost, balance now %d\n\n",
+//	                    		player.getName(), player.getBalance());
 	                	loseCount++;
                     }
 //                    console.readLine();
