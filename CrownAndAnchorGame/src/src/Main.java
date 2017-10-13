@@ -4,6 +4,8 @@ import java.util.List;
 import java.io.*;
 
 public class Main {
+
+    //private static int betlimit=5;
 	
 	public static void main(String[] args) throws Exception {
 		
@@ -42,9 +44,10 @@ public class Main {
 
                 int turn = 0; 
                 //To test BUggy Behaviour
-                 System.out.printf("before  loop  Limit :%d\n\n",limit);
+                // System.out.printf("before  loop  Limit :%d\n\n",limit);
                  //player.balanceExceedsLimitBy(bet)cause looop to stop at 5, bacause it checks last bet =5;
-                while (player.balanceExceedsLimitBy(bet) && player.getBalance() < 200)
+                //while (player.balanceExceedsLimitBy(bet) && player.getBalance() < 200)
+                while (player.balanceExceedsLimitBy(limit) && player.getBalance() < 200)
                 {
                     
                     turn++;                    
@@ -62,13 +65,14 @@ public class Main {
                     if (winnings > 0) {
 	                    System.out.printf("%s won %d, balance now %d\n\n",
 	                    		player.getName(), winnings, player.getBalance());
-                             System.out.printf("%s winning\n\n",winnings);
+                            // System.out.printf("%s winning\n\n",winnings);
 	                	winCount++; 
                     }
                     else {
 	                    System.out.printf("%s lost, balance now %d\n\n",
 	                    		player.getName(), player.getBalance());
 	                	loseCount++;
+                                //betlimit = player.getBalance();
                     }
                     
                 } //while
