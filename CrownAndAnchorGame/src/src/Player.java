@@ -29,8 +29,11 @@ public class Player {
 	}
 	
 	public boolean balanceExceedsLimitBy(int amount) {
-		return (balance - amount > limit);
-	}
+            //To test Bug 2- balance limite         
+            System.out.println("Return  :" +(balance - amount > limit) );
+            		return (balance - amount > limit);
+
+		}
 	
 	public void takeBet(int bet) {
 		if (bet < 0) throw new IllegalArgumentException("Bet cannot be negative.");

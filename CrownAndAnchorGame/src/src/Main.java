@@ -31,22 +31,26 @@ public class Main {
             	int balance = 100;
             	int limit = 0;
                 player = new Player(name, balance);
+                //set limit to stop when reached to ZERO
                 player.setLimit(limit);
+                //betting amount
                 int bet = 5;
 
                 System.out.println(String.format("Start Game %d: ", i));
                 System.out.println(String.format("%s starts with balance %d, limit %d", 
                 		player.getName(), player.getBalance(), player.getLimit()));
 
-                int turn = 0;
+                int turn = 0; 
+                //To test BUggy Behaviour
+                 System.out.printf("before  loop  Limit :%d\n\n",limit);
                 while (player.balanceExceedsLimitBy(bet) && player.getBalance() < 200)
                 {
+                    
                     turn++;                    
                 	DiceValue pick = DiceValue.getRandom();
                    
                 	System.out.printf("Turn %d: %s bet %d on %s\n",
                 			turn, player.getName(), bet, pick); 
-                	// System.out.printf("before  balance %d\n\n", player.getBalance());
                 	int winnings = game.playRound(player, pick, bet);
                         // System.out.printf("after balance now %d\n\n",player.getBalance());
                     cdv = game.getDiceValues();
