@@ -38,7 +38,7 @@ public class Game {
 				matches += 1;
 			}
 		}
-		
+		 System.out.println("Matches :" +matches+ "+ Bet Amount: +"+bet );
 		int winnings = matches * bet;
 
 		if (matches > 0) {			
