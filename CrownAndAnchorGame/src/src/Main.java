@@ -43,6 +43,7 @@ public class Main {
                 int turn = 0; 
                 //To test BUggy Behaviour
                  System.out.printf("before  loop  Limit :%d\n\n",limit);
+                 //player.balanceExceedsLimitBy(bet)cause looop to stop at 5, bacause it checks last bet =5;
                 while (player.balanceExceedsLimitBy(bet) && player.getBalance() < 200)
                 {
                     
