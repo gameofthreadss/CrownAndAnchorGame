@@ -46,6 +46,7 @@ public class Main {
                 			turn, player.getName(), bet, pick); 
                 	
                 	int winnings = game.playRound(player, pick, bet);
+                        
                     cdv = game.getDiceValues();
                     
                     System.out.printf("Rolled %s, %s, %s\n",
@@ -54,6 +55,7 @@ public class Main {
                     if (winnings > 0) {
 	                    System.out.printf("%s won %d, balance now %d\n\n",
 	                    		player.getName(), winnings, player.getBalance());
+                             System.out.printf("%s winning\n\n",winnings);
 	                	winCount++; 
                     }
                     else {

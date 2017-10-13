@@ -44,9 +44,10 @@ public class Game {
 		int winnings = matches * bet;
                 //To calculate wiinig amount
                  System.out.println("Winning  :" + winnings );
-
+                System.out.println("balance before bet :" + player.getBalance());
 		if (matches > 0) {			
 			player.receiveWinnings(winnings);
+                        
 		}
         return winnings;		
 	}
