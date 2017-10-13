@@ -47,7 +47,7 @@ public class Main {
                 // System.out.printf("before  loop  Limit :%d\n\n",limit);
                  //player.balanceExceedsLimitBy(bet)cause looop to stop at 5, bacause it checks last bet =5;
                 //while (player.balanceExceedsLimitBy(bet) && player.getBalance() < 200)
-                while (player.balanceExceedsLimitBy(limit) && player.getBalance() < 200)
+                while (player.balanceExceedsLimitBy(bet) && player.getBalance() < 200)
                 {
                     
                     turn++;                    
@@ -90,7 +90,7 @@ public class Main {
             if (ans.equals("q")) break;
         } //while true
         
-        System.out.println(String.format("Overall win rate = %.1f%%", (float)(totalWins * 100) / (totalWins + totalLosses)));
+        System.out.println(String.format("Overall win rate = %.1f%%", (float)(totalWins) / (totalWins + totalLosses)));
 	}
 
 }

@@ -20,8 +20,9 @@ public class Game {
 
 	public List<DiceValue> getDiceValues() {
 		values.clear();
-		for (Dice d : dice) {
-			values.add(d.getValue());
+		for (Dice d : dice) {               
+                    //values.add( d.getValues());//original bug 3
+		    values.add( d.roll());//bug 3 corrected
 		}
 		return Collections.unmodifiableList(values);
 	}	

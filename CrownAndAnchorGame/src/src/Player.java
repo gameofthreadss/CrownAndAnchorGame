@@ -31,7 +31,7 @@ public class Player {
 	public boolean balanceExceedsLimitBy(int amount) {
             //To test Bug 2- balance limite         
             //System.out.println("Return  :" +(balance - amount > limit) );
-            	return (balance - amount > limit);
+            	return (balance - amount >= limit);//bug 2 resolved
 
 		}
 	
