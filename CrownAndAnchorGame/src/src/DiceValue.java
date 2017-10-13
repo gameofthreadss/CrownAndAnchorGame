@@ -24,6 +24,8 @@ public enum DiceValue {
 	}
 	
 	public static DiceValue getRandom() {
+            //Unreported BUG .. Does not roll SPADE because of DiceValue.SPADE.ordinal(), it should be length of values
+            //int random = RANDOM.nextInt(DiceValue.SPADE.ordinal());
 		int random = RANDOM.nextInt(values().length);
 		return values()[random];
 	}
