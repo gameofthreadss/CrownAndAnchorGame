@@ -1,3 +1,5 @@
+package crownandanchor;
+
 import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
@@ -50,6 +52,9 @@ public class Game {
 		if (matches > 0) {			
 			player.receiveWinnings(winnings);
 		}
+                else {
+                player.takeBet(bet);
+                }
         return winnings;		
 	}
 	

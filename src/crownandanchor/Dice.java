@@ -1,3 +1,4 @@
+package crownandanchor;
 public class Dice {
 			
 	private DiceValue value;
