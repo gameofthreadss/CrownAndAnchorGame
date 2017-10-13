@@ -1,7 +1,8 @@
 package crownandanchor;
+
 public class Player {
 	private String name;
-	private int balance,newbalance;
+	private int balance;
 	private int limit;
 	
 	public Player(String name, int balance) {
@@ -23,13 +24,10 @@ public class Player {
 	}
 
 	public boolean balanceExceedsLimit() {
-		return (balance > limit);
+		return (balance >= limit);
 	}
 	
 	public boolean balanceExceedsLimitBy(int amount) {
-            
-		       //Added missing condition to end game when user doenot have more balance and balance exceeds bet amount
-            
 		return (balance - amount >= limit);
 	}
 	
@@ -41,9 +39,7 @@ public class Player {
 	
 	public void receiveWinnings(int winnings) {
 		if (winnings < 0) throw new IllegalArgumentException("Winnings cannot be negative.");
-
-		balance = balance + winnings;
-           
+		balance = balance + winnings;		
 	}
 	
 	public String toString() {

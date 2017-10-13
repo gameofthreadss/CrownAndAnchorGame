@@ -1,5 +1,4 @@
 package crownandanchor;
-
 import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
@@ -30,8 +29,6 @@ public class Game {
 		if (player == null) throw new IllegalArgumentException("Player cannot be null.");
 		if (pick == null) throw new IllegalArgumentException("Pick cannot be negative.");
 		if (bet < 0) throw new IllegalArgumentException("Bet cannot be negative.");
-		
-                  player.takeBet(bet);
 		    
 		int matches = 0;
 		for ( Dice d : dice) {
@@ -39,22 +36,17 @@ public class Game {
 			if (d.getValue().equals(pick)) { 
 				matches += 1;
 			}
+                        
+                        System.out.println(matches + " " + d);
 		}
-                
-//		//Added condition to deduct balance only if user loses a bet.
-//                if(matches == 0){		
-//                    player.takeBet(bet);
-//		   
-//                }
-                
+		 System.out.println(matches + " "  +bet);
 		int winnings = matches * bet;
 
 		if (matches > 0) {			
 			player.receiveWinnings(winnings);
+		} else {
+			player.takeBet(bet);
 		}
-                else {
-                player.takeBet(bet);
-                }
         return winnings;		
 	}
 	

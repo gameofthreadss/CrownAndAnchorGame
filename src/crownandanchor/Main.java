@@ -1,5 +1,4 @@
 package crownandanchor;
-
 import java.util.List;
 import java.io.*;
 
@@ -9,6 +8,7 @@ public class Main {
 		
 	   BufferedReader console = new BufferedReader(new InputStreamReader(System.in));
 
+	   	int numGames = 100;
         Dice d1 = new Dice();
         Dice d2 = new Dice();
         Dice d3 = new Dice();
@@ -25,7 +25,7 @@ public class Main {
             int winCount = 0;
             int loseCount = 0;
             
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < numGames; i++)
             {
             	String name = "Fred";
             	int balance = 100;
@@ -63,12 +63,13 @@ public class Main {
 	                    		player.getName(), player.getBalance());
 	                	loseCount++;
                     }
-                    
+//                    console.readLine();
                 } //while
 
                 System.out.print(String.format("%d turns later.\nEnd Game %d: ", turn, i));
-                System.out.println(String.format("%s now has balance %d\n", player.getName(), player.getBalance()));
                 
+                System.out.println(String.format("%s now has balance %d\n", player.getName(), player.getBalance()));
+//                console.readLine();
             } //for
             
             System.out.println(String.format("Win count = %d, Lose Count = %d, %.2f", winCount, loseCount, (float) winCount/(winCount+loseCount)));
