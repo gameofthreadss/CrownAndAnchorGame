@@ -21,8 +21,8 @@ public class Game {
 	public List<DiceValue> getDiceValues() {
 		values.clear();
 		for (Dice d : dice) {               
-                    //values.add( d.getValues());//original bug 3
-		    values.add( d.roll());//bug 3 corrected
+                    //values.add( d.getValues());//original unreported bug - Every roll has same value through out game
+		    values.add( d.roll());//Unreported bug Corrected, now will have random roll every time
 		}
 		return Collections.unmodifiableList(values);
 	}	
